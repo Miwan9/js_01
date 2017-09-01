@@ -70,13 +70,13 @@ function years(){
 	var f=document.getElementById('inp8').value; 
 		f=parseInt(f); 
 	var g;
-	if (f>1000) {
-			g=2016-f;
+	if (f>1000 && f<=2001) {
+			g=2017-f;
 			document.getElementById('par1').innerHTML=g;
 			console.log('Добро пожаловать')
 	}
-	else if (f<16) {
-			g=16-f;
+	else {
+			g=2017-f;
 			document.getElementById('par1').innerHTML=g;
 			console.log('Вход воспрещен')
 	}
@@ -89,16 +89,16 @@ function stag () {
 	if (h>0 && h<3) {
 		console.log('нет надбавки, потому что стаж меньше 3х лет')
 	}	
-	else if (h>3 && h<10) {
-		console.log('h*10%');
+	else if (h>=3 && h<=10) {
+		console.log('Надбавка за стаж 10%');
 	}
-	else if (h>10 && h<20) {
-		console.log('h*20%');
+	else if (h>=10 && h<=20) {
+		console.log('Надбавка за стаж 20%');
 	}
-	else if (h<0) {
+	else if (h<=0) {
 		console.log('Ошибка')
 	}
 	else {
-		console.log('h*30%');
+		console.log('Надбавка за стаж 30%');
 	}
 }
